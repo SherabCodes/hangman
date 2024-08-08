@@ -19,6 +19,7 @@ def hangman():
     print("The words you have guessed so far: ",' '.join(used_letters))
 
     word_list = [letter for letter in used_letters else '_' for letter in word]
+    print("Your word: ", ' '.join(word_list))
     user_input = input("Guess a Letter: ").upper()
     if user_input in alphabet - used_letters: # Checks if the letter is valid and not previously guessed by the user
       used_letters.add(user_input)
